@@ -91,7 +91,7 @@ From what I can tell from the call stack, the old assembly, and the patch, `0x20
 At this point, I was pretty disappointed. This did not lead to a very useful bug. On the flip side, I was eager to jump back into reverse engineering the kernel I thought existed in iBoot. A little spoiler to the reader: all of this is the tip of the iceberg. iBoot has significantly changed, and we're in a new era. Gone are the days of the tiny iBoot task subsystem. Welcome to "the Dream".
 
 ## (4) The Microkernel Dream
-*https://twitter.com/tjkr0wn/status/1535005157947326464?s=20&t=2d26FvCHltl7wQP9rvQq-Q*
+*https://twitter.com/tjkr0wn/status/1535005157947326464
 
 One of my favorite ways to reverse engineer a new component is to compare the startup routines of the same binary. In this instance, I went through and compared the startup routines of iBoot before and after this supposed kernel was added. When comparing the 15.0 iBoot to a 14.X iBoot, I noticed an important difference. The startup routine jumps to an unfamiliar function. Previously, iBoot went through this flow: `_start(...) -> _main(...)`. However, this iBoot had a new flow `_start(...) -> _intermediate(...) -> _new_main?(...)`:
 
