@@ -79,7 +79,7 @@ This looks like a general wrapper for the syscall, but what's more interesting i
 
 Ah, it looks like a simple error. Although the necessary conditions should eventually be reached to stop this `while` loop, it looks like ultimately `task_start` my have been getting called in excess of 0x20, which lead to the check failing and the corresponding panic.
 
-Apple has patched this in their latest iOS 16 beta. For anyone who needs the key, enjoy: `047CAED3912AFB8B647F7B1743B56034E6C5EF2624C8282F6E073B11E1DEF06E548EA3298872C61D3B994E1C8ACABC62`
+Apple has patched this in their latest iOS 16 beta. For anyone who needs the key, enjoy: `047CAED3912AFB8B647F7B1743B56034E6C5EF2624C8282F6E073B11E1DEF06E548EA3298872C61D3B994E1C8ACABC62`  
 *Source: https://twitter.com/matteyeux/status/1535138636273963008*
 
 And here's the patch:
