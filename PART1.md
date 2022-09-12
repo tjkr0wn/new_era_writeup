@@ -535,3 +535,5 @@ At this point, you might still have lots of questions. I hope to answer these in
 With lots of love (and assembly),
 
 Tarek Joumaa - tjkr0wn
+
+EOF
